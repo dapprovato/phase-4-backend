@@ -11,7 +11,7 @@ class TasksController < ApplicationController
     end
 
     def create
-        task = Task.create(content: params[:content])
+        task = Task.create(task_params)
         render json: task, status: :created
     end
 

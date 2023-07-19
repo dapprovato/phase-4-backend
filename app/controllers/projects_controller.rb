@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
     def index
         projects = Project.all
-        render json: projects
+        render json: projects, only: [:id, :title, :description]
     end
 
     def show
